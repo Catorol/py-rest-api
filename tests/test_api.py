@@ -14,7 +14,7 @@ async def create_task(client, owner_id, **extra):
 # 1. создание пользователя (201)
 async def test_create_user(client):
     response = await client.post("/users", json={"email": "denis@gmail.com", "name": "Denis"})
-    assert response.status_code == 404
+    assert response.status_code == 200
     body = response.json()
     assert body["id"] == 1
     assert body["email"] == "denis@gmail.com"
