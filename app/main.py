@@ -1,7 +1,9 @@
 import logging
 import time
+
 from fastapi import FastAPI, Request
 from starlette.middleware.base import BaseHTTPMiddleware
+
 from app.routers import tasks, users
 
 
